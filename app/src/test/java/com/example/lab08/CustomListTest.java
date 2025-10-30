@@ -42,4 +42,15 @@ public class CustomListTest {
             cityList.delete(bingusLand);
         });
     }
+
+    @Test
+    void testCountCity(){
+        CustomList cityList = mockCityList();
+        assertEquals(1, cityList.getCities().size());
+        City city = new City("Regina", "Saskatchewan");
+        cityList.add(city);
+        assertEquals(2, cityList.getCities().size());
+        assertEquals(2, cityList.countCity());
+
+    }
 }
