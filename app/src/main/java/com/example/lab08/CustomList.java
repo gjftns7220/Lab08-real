@@ -28,6 +28,10 @@ public class CustomList {
         }
         else {throw new IllegalArgumentException();}
     }
+
+    public int countCity (){
+        return cities.size();
+    }
     
 
     // Will be implemented later using TDD (leave blank for now)
