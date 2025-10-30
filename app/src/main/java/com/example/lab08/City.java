@@ -1,6 +1,6 @@
 package com.example.lab08;
 
-public class City {
+public class City implements Comparable{
     private String city;
     private String province;
 
@@ -25,6 +25,11 @@ public class City {
         City cityObj = (City) o;
         return this.city.equals(cityObj.city)
                 && this.province.equals(cityObj.province);
+    }
+    @Override
+    public int compareTo(Object o) {
+        City city = (City) o;
+        return this.city.compareTo(city.getCityName()); // this.city refers to the city name
     }
 
     @Override
